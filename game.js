@@ -27,7 +27,7 @@ function createCircle(speed) {
     scoreDisplay.textContent = score;
     gameContainer.removeChild(circle);
     clearTimeout(circleTimeout);
-    createCircle(Math.max(speed - 100, 500));
+    createCircle(Math.max(speed - 200, 500));
   });
 
   // Fine della partita se il cerchio non viene cliccato
@@ -49,7 +49,7 @@ function startGame() {
   scoreDisplay.textContent = score;
   gameContainer.innerHTML = '';
 
-  const initialSpeed = 2000; // Velocità iniziale
+  const initialSpeed = 3000; // Velocità iniziale
   createCircle(initialSpeed);
 
   // Controlla il tempo per la vittoria
